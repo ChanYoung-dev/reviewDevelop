@@ -1,11 +1,13 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/reviewDevelop
-    username: sa
-    password:
-    driver-class-name: org.h2.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://review-develop-db.ctupwybe3pr8.us-east-1.rds.amazonaws.com:3306/review_develop_db
+    username: emrhssla
+    password: em89138913
 
   jpa:
+    #database-platform: org.hibernate.dialect.MySQLDialect
+    #show-sql: true
     hibernate:
       ddl-auto: create
     properties:
@@ -16,6 +18,7 @@ spring:
 logging.level:
   org.hibernate.SQL: debug
   org.hibernate.type: trace
+
 
 server:
   port : 8081
